@@ -70,6 +70,12 @@ var buf = Buffer.from("450002c5939900002c06ef98adc24f6c850186d1", "hex");
 console.log(ipHeader.parse(buf));
 ```
 
+## Browser Usage
+To use binary_parser/binary_unparser in the browser you have to build using browserify like so:
+```
+npm run browserify
+```
+
 ## API
 
 ### new Parser()
