@@ -12,7 +12,8 @@
     "fmt": "npx prettier --write '{lib,test,example}/**/*.js'",
     "check-fmt": "npx prettier --list-different '{lib,test,example}/**/*.js'",
     "test": "npx mocha --reporter spec",
-    "cover": "npx istanbul cover --report html node_modules/.bin/_mocha"
+    "cover": "npx istanbul cover --report html node_modules/.bin/_mocha",
+    "browserify": "browserify ./lib/binary_unparser.js -o binary_unparser.bundle.js"
   },
   "keywords": [
     "binary",
