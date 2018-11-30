@@ -75,6 +75,46 @@ To use binary_parser/binary_unparser in the browser you have to build using brow
 ```
 npm run browserify
 ```
+If you add the generated `build/binary_unparser.main.bundle.js` as a script tag then you can now access on the window object:
+```
+console.log(window["binary_unparser"])
+```
+
+## UnParser Example Usage
+```js
+const { Parser, FileUnparser, ReactUnparser, Buffer } = window["binary_unparser"];
+
+// Build an IP packet header Parser
+var ipHeader = new Parser.Parser()
+  .endianess("big")
+  .bit4("version")
+  .bit4("headerLength")
+  .uint8("tos")
+  .uint16("packetLength")
+  .uint16("id")
+  .bit3("offset")
+  .bit13("fragOffset")
+  .uint8("ttl")
+  .uint8("protocol")
+  .uint16("checksum")
+  .array("src", {
+    type: "uint8",
+    length: 4
+  })
+  .array("dst", {
+    type: "uint8",
+    length: 4
+  });
+
+var buf = Buffer.from("450002c5939900002c06ef98adc24f6c850186d1", "hex");
+
+// Parse buffer and show result
+const result = ipHeader.parse(buf);
+console.log('result:',result);
+
+var ipHeaderUP = new FileUnparser(ipHeader);
+console.log("Unparsed:",ipHeaderUP.unparse(result, buf));
+```
 
 ## API
 
