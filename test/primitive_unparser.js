@@ -14,15 +14,20 @@ describe("Primitive UNparser", function() {
       var unParser = new FileUnparser(parser);
       assert.deepEqual(unParser.unparse(result, buffer), [0xa, 0x14, 0x1e, 0x28, 0x32]);
     });
-    // it("should parse integer types", function() {
-    //   var parser = Parser.start()
-    //     .uint8("a")
-    //     .int16le("b")
-    //     .uint32be("c");
 
-    //   var buffer = Buffer.from([0x00, 0xd2, 0x04, 0x00, 0xbc, 0x61, 0x4e]);
-    //   assert.deepEqual(parser.parse(buffer), { a: 0, b: 1234, c: 12345678 });
-    // });
+    it("should UNparse integer types", function() {
+      var parser = Parser.start()
+        .uint8("a")
+        .int16le("b")
+        .uint32be("c");
+
+      var buffer = Buffer.from([0x00, 0xd2, 0x04, 0x00, 0xbc, 0x61, 0x4e]);
+      const result = parser.parse(buffer);
+      assert.deepEqual(result, { a: 0, b: 1234, c: 12345678 });
+
+      var unParser = new FileUnparser(parser);
+      assert.deepEqual(unParser.unparse(result,buffer), [0x00, 0xd2, 0x04, 0x00, 0xbc, 0x61, 0x4e]);
+    });
     // it("should use formatter to transform parsed integer", function() {
     //   var parser = Parser.start()
     //     .uint8("a", {
