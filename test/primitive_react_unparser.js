@@ -19,7 +19,7 @@ describe("Primitive React UNparser", function() {
 
     it("should UNparse integer types React", function() {
       var parser = Parser.start()
-        .uint8("a")
+        .uint8("a", { assertWithoutErroring: -1 })
         .int16le("b")
         .int16le("c")
         .uint32be("d");
@@ -29,6 +29,7 @@ describe("Primitive React UNparser", function() {
       assert.deepEqual(result, { a: 0, b: 1234, c:513, d: 12345678 });
 
       var unParser = new ReactUnparser(parser);
+      console.error("Code:", unParser.getUnparserCode());
       snapshot(unParser.unparse(result,[], React));
     });
     // it("should use formatter to transform parsed integer", function() {

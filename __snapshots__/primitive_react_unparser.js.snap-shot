@@ -4,8 +4,10 @@ exports['should UNparse integer types React 1'] = [
     "key": "vars.a0",
     "ref": null,
     "props": {
-      "className": "a",
-      "options": {},
+      "className": "a invalid",
+      "options": {
+        "assertWithoutErroring": -1
+      },
       "keys": "vars,a",
       "title": "a",
       "offset": 0,
@@ -21,7 +23,7 @@ exports['should UNparse integer types React 1'] = [
     "key": "vars.b1",
     "ref": null,
     "props": {
-      "className": "b",
+      "className": "b ",
       "options": {},
       "keys": "vars,b",
       "title": "b",
@@ -38,7 +40,7 @@ exports['should UNparse integer types React 1'] = [
     "key": "vars.c3",
     "ref": null,
     "props": {
-      "className": "c",
+      "className": "c ",
       "options": {},
       "keys": "vars,c",
       "title": "c",
@@ -55,7 +57,7 @@ exports['should UNparse integer types React 1'] = [
     "key": "vars.d5",
     "ref": null,
     "props": {
-      "className": "d",
+      "className": "d ",
       "options": {},
       "keys": "vars,d",
       "title": "d",
