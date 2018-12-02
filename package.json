@@ -10,7 +10,8 @@
     "esmify": "^2.0.0",
     "istanbul": "^0.4.5",
     "mocha": "^3.5.3",
-    "prettier": "^1.9.2"
+    "prettier": "^1.9.2",
+    "snap-shot": "^2.17.0"
   },
   "scripts": {
     "fmt": "npx prettier --write '{lib,test,example}/**/*.js'",
@@ -41,7 +42,8 @@
   "bugs": "http://github.com/keichi/binary-parser/issues",
   "dependencies": {
     "buffer": "^5.2.1",
-    "r.js": "^1.0.3"
+    "r.js": "^1.0.3",
+    "react": "^16.6.3"
   },
   "engines": {
     "node": ">=5.10.0"

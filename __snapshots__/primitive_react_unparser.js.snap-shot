@@ -1,0 +1,71 @@
+exports['should UNparse integer types React 1'] = [
+  {
+    "type": "div",
+    "key": "vars.a0",
+    "ref": null,
+    "props": {
+      "className": "a",
+      "options": {},
+      "keys": "vars,a",
+      "title": "a",
+      "offset": 0,
+      "uniqueKey": "vars.a0",
+      "value": 0,
+      "children": "0x00"
+    },
+    "_owner": null,
+    "_store": {}
+  },
+  {
+    "type": "div",
+    "key": "vars.b1",
+    "ref": null,
+    "props": {
+      "className": "b",
+      "options": {},
+      "keys": "vars,b",
+      "title": "b",
+      "offset": 1,
+      "uniqueKey": "vars.b1",
+      "value": 1234,
+      "children": "0xd204"
+    },
+    "_owner": null,
+    "_store": {}
+  },
+  {
+    "type": "div",
+    "key": "vars.c3",
+    "ref": null,
+    "props": {
+      "className": "c",
+      "options": {},
+      "keys": "vars,c",
+      "title": "c",
+      "offset": 3,
+      "uniqueKey": "vars.c3",
+      "value": 513,
+      "children": "0x0102"
+    },
+    "_owner": null,
+    "_store": {}
+  },
+  {
+    "type": "div",
+    "key": "vars.d5",
+    "ref": null,
+    "props": {
+      "className": "d",
+      "options": {},
+      "keys": "vars,d",
+      "title": "d",
+      "offset": 5,
+      "uniqueKey": "vars.d5",
+      "value": 12345678,
+      "children": "0x00BC614E"
+    },
+    "_owner": null,
+    "_store": {}
+  }
+]
+
